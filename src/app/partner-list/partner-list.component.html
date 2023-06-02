@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row pt-2">
+        <div class="col-md-12 d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">PartNERek listája</h3>
+          <button class="btn btn-outline-primary" (click)="goToAddNewPartnerPage()">Új gép hozzáadása</button>
+        </div>
+        <hr class="mt-2">
+    </div>
+    
+    <div class="col-md-8">
+    <ul>
+      <li *ngFor="let partner of partners" class="mt-2">
+        <span class="fw-bold">{{ partner.pName }}, </span> 
+        {{ partner.pId }}
+        <div>
+            <button class="btn btn-sm btn-outline-primary">Részletek</button>
+            <button class="btn btn-sm btn-outline-danger ms-2" (click)="deletePartnerItem(partner)">Törlés</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>

@@ -1,0 +1,22 @@
+  <div class="container" *ngFor="let machine of machines">
+    <div class="row pt-2">
+        <div class="col-md-12 d-flex justify-content-between align-items-center">
+          <h3 class="mb-0">Gépek listája</h3>
+          <button class="btn btn-outline-primary" (click)="goToMachineForm(machine.id)">Új gép hozzáadása</button>
+        </div>
+        <hr class="mt-2">
+    </div>
+    
+    <div class="col-md-8">
+    <ul>
+      <li class="mt-2">
+        <span class="fw-bold">{{ machine.mName }}, </span> 
+        {{ machine.id }}
+        <div>
+            <button class="btn btn-sm btn-outline-primary">Részletek</button>
+            <button class="btn btn-sm btn-outline-danger ms-2" (click)="deleteMachineFromList(machine)">Törlés</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>

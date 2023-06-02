@@ -1,0 +1,29 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+            <div class="mb-3">
+                <label for="name" class="form-label">Cég neve</label>
+                <label for="id" class="form-label" id="id" name="id">{{newPartner.pId}}"</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newPartner.pName">
+            </div>
+            <div class="mb-3">
+                <label for="representative" class="form-label">Cég képviselőjének neve</label>
+                <input type="text" class="form-control" id="representative" name="representative" [(ngModel)]="newPartner.pRepresentative">
+            </div>
+            <div class="mb-3">
+                <label for="taxnumber" class="form-label">Adószám</label>
+                <input type="number" class="form-control" id="taxnumber" name="taxnumber" [(ngModel)]="newPartner.pTaxNumber">
+            </div>
+            <div class="mb-3">
+                <label for="regnumber" class="form-label">Cégjegyzékszám</label>
+                <input type="number" class="form-control" id="regnumber" name="regnumber" [(ngModel)]="newPartner.pCompanyRegistrationNumber">
+            </div>
+            <div class="mb-3">
+                <label for="hq" class="form-label">Székhely</label>
+                <input type="text" class="form-control" id="hq" name="hq" [(ngModel)]="newPartner.pHeadquarters">
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+                <button class="btn btn-outline-primary" (click)="addPartner()">Partner hozzáadása</button>
+                <button class="btn btn-outline-danger" (click)="goToPartnerListPage()">Vissza</button>
+            </div>
+    </div>
+</div>

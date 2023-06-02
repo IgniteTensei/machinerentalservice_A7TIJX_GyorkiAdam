@@ -1,0 +1,49 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <h4>Gép hozzáadása</h4>
+        <hr>
+    </div>
+</div>
+
+<div class="row justify-content-md-center">   
+    <div class="col-md-6">
+        <form [formGroup]="machineForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Név</label>
+                <input type="text" class="form-control" id="name" name="name" formControlName="mName">
+            </div>
+            <div class="mb-3">
+                <label for="brand" class="form-label">Márka</label>
+                <input type="text" class="form-control" id="brand" name="brand" formControlName="mBrand">
+            </div>
+            <div class="mb-3">
+                <label for="type" class="form-label">Típus</label>
+                <input type="text" class="form-control" id="type" name="type" formControlName="mType">
+            </div>
+            <div class="mb-3">
+                <label for="performance" class="form-label">Teljesítmény</label>
+                <input type="number" class="form-control" id="performance" name="performance" formControlName="mPerformance">
+                <span class="input-group-text">W</span>
+            </div>
+            <div class="mb-3">
+                <label for="weight" class="form-label">Súly</label>
+                <input type="number" class="form-control" id="weight" name="weight" formControlName="mWeight">
+                <span class="input-group-text">kg</span>
+            </div>
+            <div class="mb-3">
+                <label for="weight" class="form-label">Biztonsági Letét</label>
+                <input type="number" class="form-control" id="weight" name="weight" formControlName="mSecurityDeposit">
+                <span class="input-group-text">Ft</span>
+            </div>
+            <div class="mb-3">
+                <label for="weight" class="form-label">Nap Bérleti Díj</label>
+                <input type="number" class="form-control" id="weight" name="weight" formControlName="mDailyRentalFee">
+                <span class="input-group-text">Ft</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+                <button class="btn btn-outline-primary" (click)="addMachine()">Gép hozzáadása</button>
+                <button class="btn btn-outline-danger" (click)="goToMachineList()">Vissza</button>
+            </div>
+        </form>
+    </div>
+</div>
